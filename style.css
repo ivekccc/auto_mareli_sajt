@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+nav h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+nav .contact-info p {
+    margin: 0.3rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Општи стилови за слајдере */
+.main-slider, .services-slider {
+    position: relative;
+    max-width: 100%;
+    margin: 2rem auto;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slider-image {
+    width: 100%;
+    display: block;
+}
+
+.slider-prev, .slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.slider-prev {
+    left: 5px;
+}
+
+.slider-next {
+    right: 5px;
+}
+
+/* Специфични стилови за главни слајдер ако су потребни */
+.main-slider {
+    /* Додајте специфичне стилове овде ако су потребни */
+}
+
+/* Специфични стилови за слајдер услуга ако су потребни */
+.services-slider {
+    /* Додајте специфичне стилове овде ако су потребни */
+}
+
+section {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+}
+
+.contact a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Lokacija */
+.location {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 75%; /* Промењено са 56.25% на 75% за више квадратни облик */
+    height: 0;
+    overflow: hidden;
+    margin-top: 1rem;
+    max-width: 100%; /* Осигурава да контејнер не прелази ширину родитељског елемента */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%; /* Осигурава да iframe не прелази ширину свог контејнера */
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 0 2rem;
+    }
+
+    nav {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .slider-prev, .slider-next, .services-prev, .services-next {
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    .map-container {
+        padding-bottom: 56.25%; /* Враћамо на 16:9 однос за веће екране */
+        max-width: 600px; /* Ограничавамо максималну ширину на већим екранима */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
